@@ -91,7 +91,8 @@ Real yield ≈ Nominal yield − Inflation expectations (breakeven)
 - [CME FedWatch](https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool.html)
 
 ## Spot price source (for trading plans)
-- **Primary spot:** Swissquote-sourced XAUUSD via [XAUAD gold price today](https://xauad.com/gold-price-today.html) (`source: Swissquote spot`)
+- **Primary spot:** Swissquote direct public feed `forex-data-feed.swissquote.com` (XAU/USD mid)
+- **Fallback:** Swissquote-sourced quote via [XAUAD gold price today](https://xauad.com/gold-price-today.html)
 - **Helper script:** `python3 scripts/spot_xauusd.py`
 - **Futures:** Yahoo `GC=F` used only as structure backup / mapping check
 - Always confirm final entry on **your broker XAUUSD** quote (spread can differ a few dollars)
@@ -100,7 +101,7 @@ Real yield ≈ Nominal yield − Inflation expectations (breakeven)
 1. Check calendar (Forex Factory / GoldSquawk)
 2. Read inflation + Fed path
 3. Note **nominal 10Y**, **real 10Y**, **breakeven**, **DXY**
-4. Read **Swissquote-sourced spot** (XAUAD) before marking zones
+4. Read **Swissquote direct spot** before marking zones
 5. Only then mark XAUUSD zones / triggers
 6. After data/FOMC: update bias from Reuters + Fed statement
 7. Weekly: World Gold Council + Kitco + CFTC/COT
